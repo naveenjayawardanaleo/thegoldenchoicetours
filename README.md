@@ -1,66 +1,126 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+The Golden Choice Tours
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The Golden Choice Tours - a full-featured, production-ready CMS for a tour company built with Laravel and a custom frontend converted from Figma → HTML/CSS/JS using Bootstrap.
 
-## About Laravel
+Fully completed CMS: tour management, bookings, admin panel, content pages, and responsive UI.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+🚀 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Admin CMS for managing tours, bookings, destinations, prices, images, and content
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Public-facing frontend (landing pages, tour details, booking flow)
 
-## Learning Laravel
+Authentication & role-based admin access
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+CRUD for tours, categories, testimonials, FAQs, galleries
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Booking confirmation emails (configurable SMTP)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Image uploads & responsive asset handling
 
-## Laravel Sponsors
+SEO-friendly routes and metadata
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Built with Bootstrap for mobile-first responsive layout
 
-### Premium Partners
+Frontend hand-converted from Figma to HTML/CSS/JS
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+🛠 Tech Stack
 
-## Contributing
+Backend: PHP, Laravel (8/9/10+)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Frontend: HTML5, CSS3, JavaScript
 
-## Code of Conduct
+Styling / UI: Bootstrap (customized from Figma)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Database: MySQL (or MariaDB)
 
-## Security Vulnerabilities
+Task runner: npm / Laravel Mix (or Vite)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+📁 Project Structure (high level) /app /bootstrap /config /database /public /assets /css /js /images /resources /views # blade templates (frontend + admin) /sass / js # source styles & scripts (if using Mix/Vite) routes .env.example
 
-## License
+▶️ Quick Start (copy & paste)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Clone repo
+
+git clone https://github.com/yourusername/thegoldenchoicetours.git cd thegoldenchoicetours
+
+Install PHP dependencies
+
+composer install
+
+Install frontend dependencies
+
+npm install npm run dev # or npm run build for production
+
+Copy .env and set keys
+
+cp .env.example .env php artisan key:generate
+
+then edit .env to set DB, MAIL, APP_URL, etc.
+Database setup
+
+php artisan migrate php artisan db:seed # optional seeders (tours, admin user)
+
+Storage link (for images)
+
+php artisan storage:link
+
+Run app locally
+
+php artisan serve open http://127.0.0.1:8000
+
+🔧 Environment variables to configure
+
+Edit .env for:
+
+DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD
+
+MAIL_MAILER, MAIL_HOST, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD, MAIL_FROM_ADDRESS
+
+APP_URL
+
+Optional: REDIS_HOST, QUEUE_CONNECTION
+
+✅ Admin / Demo Data
+
+After running seeders, check database/seeders for demo admin credentials or create an admin user:
+
+php artisan tinker
+
+\App\Models\User::factory()->create(['email' => 'admin@example.com', 'is_admin' => true]);
+
+📸 UI & Assets
+
+All public UI pages were designed in Figma and converted to clean Bootstrap-based HTML/CSS/JS.
+
+Source Figma designs (exported assets) placed under /public/assets/images and SCSS/JS source in /resources.
+
+♻️ Deployment notes
+
+Build frontend assets for production: npm run build
+
+Use php artisan config:cache and php artisan route:cache on production
+
+Set proper file permissions for storage and bootstrap/cache
+
+Use a process manager (supervisor) for queues and workers, and schedule cron for php artisan schedule:run
+
+🤝 Contributing
+
+PRs welcome. Please follow these steps:
+
+Fork the repo
+
+Create a feature branch
+
+Add tests / describe changes in the PR
+
+Submit PR for review
+
+📝 License
+
+MIT License — see LICENSE file.
+
+Contact / Support
+
+For questions or help setting up, open an issue or contact the maintainer: naveenjayawardanaleo@gmail.com
