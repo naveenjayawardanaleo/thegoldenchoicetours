@@ -42,7 +42,7 @@ Task runner: npm / Laravel Mix (or Vite)
 
 Clone repo
 
-git clone https://github.com/yourusername/thegoldenchoicetours.git cd thegoldenchoicetours
+git clone https://github.com/naveenjayawardanaleo/thegoldenchoicetours.git cd thegoldenchoicetours
 
 Install PHP dependencies
 
